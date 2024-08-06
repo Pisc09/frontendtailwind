@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+  </head>
+  <body class="h-screen bg-gray-950">
+    <!-- Header -->
+    <header
+      class="flex w-full items-center justify-between gap-6 bg-gray-900 p-6 text-white sm:gap-0"
+    >
+      <!-- ↓ côté gauche ↓ -->
+      <div class="flex w-full flex-row items-center gap-6">
+        <h1>LOGO</h1>
+        <input
+          class="w-full rounded-full border border-gray-600 bg-gray-900 placeholder:text-sm placeholder:text-gray-400 sm:mr-6 lg:w-60"
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Recherche..."
+        />
+
+        <nav class="hidden flex-row gap-6 lg:flex">
+          <a href="">Acceuil</a>
+          <a href="">Acceuil</a>
+          <a href="">Acceuil</a>
+          <a href="">Acceuil</a>
+          <a href="">Acceuil</a>
+        </nav>
+      </div>
+
+      <!-- ↑ côté gauche ↑ ***Séparation*** ↓ côté droit ↓ -->
+
+      <!-- ↓ côté droit ↓ -->
+      <div class="flex flex-row items-center gap-6">
+        <!--↓ icône bell ↓-->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="hidden size-9 cursor-pointer rounded-full p-2 transition-colors hover:bg-gray-700 md:flex"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+          />
+        </svg>
+
+        <!--↓ rond blue ↓-->
+        <div
+          class="hidden size-8 cursor-pointer rounded-full bg-blue-600 md:flex"
+        ></div>
+
+        <!--↓ icône fléche vers le bas ↓-->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="hidden size-9 cursor-pointer rounded-full p-2 transition-colors hover:bg-gray-700 md:flex"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+
+        <!--↓ icône bars ↓-->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="flex size-8 cursor-pointer rounded-md p-1 transition-colors hover:bg-slate-700 lg:hidden"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
+    </header>
+
+    <!-- table -->
+    <!-- <table class="mt-14">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Title</th>
+          <th scope="col">Email</th>
+          <th scope="col">
+            <span class="sr-only">Role</span>
+          </th>
+          <th scope="col">
+            <span class="sr-only">Edit</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lindsay Walton</td>
+          <td>Front-end Developer</td>
+          <td>lindsay.walton@example.com</td>
+          <td>Member</td>
+          <td>
+            <a href="#">Edit<span class="sr-only">, Lindsay Walton</span></a>
+          </td>
+        </tr>
+      </tbody>
+    </table> -->
+  </body>
+</html>
