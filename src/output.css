@@ -1892,6 +1892,10 @@ html {
     display: flex;
   }
 
+  .lg\:inline-flex {
+    display: inline-flex;
+  }
+
   .lg\:hidden {
     display: none;
   }
