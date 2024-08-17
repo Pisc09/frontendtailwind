@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {
       strokeWidth: {
-        0.5: "0.5",
-        1: "1",
-        1.5: "1.5",
-        2: "2",
+        0.5: "0.5px",
+        1: "1px",
+        1.5: "1.5px",
+        2: "2px",
         // Ajouter d'autres valeurs si besoin
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar")],
 };

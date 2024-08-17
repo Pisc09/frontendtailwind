@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <title>Champ de saisie</title>
+  </head>
+  <body class="flex h-screen items-center justify-center bg-slate-950">
+    <!-- ↓ Mise en page d'une balise input avec élément positionné à droite ↓ -->
+    <!-- ******************************************************************** -->
+    <!-- ↓ Balise parent qui englobe tout, en position RELATIVE, cette div permet d'étendre l'input sur toute la largeur du navigateur avec "w-full" ↓ -->
+    <div class="relative flex items-center">
+      <!-- ↓ Balise input, **pas de position** ↓ -->
+      <input
+        class="block w-full rounded-md border-0 bg-slate-950 py-1.5 pr-14 text-white ring-1 ring-inset ring-gray-800 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        type="text"
+      />
+      <!-- ↓ Balise qui est positionné à droite, en position ABSOLUTE ↓ -->
+      <div class="absolute inset-y-0 right-0 flex py-1.5 pr-1.5">
+        <!-- ↓ Balise à l'intérieur de celle poisitionné à droite, qui à le carré arrondi ↓ -->
+        <kbd
+          class="inline-flex items-center rounded border border-gray-800 bg-gray-900 px-1 font-sans text-xs text-gray-700"
+        >
+          ⌘K
+        </kbd>
+      </div>
+    </div>
+    <i
+      class="ri-folder-fill cursor-pointer text-2xl text-gray-800 transition-all duration-300 ease-linear hover:text-sky-500"
+    ></i>
+  </body>
+</html>

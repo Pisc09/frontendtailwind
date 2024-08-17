@@ -6,20 +6,24 @@
     <link rel="stylesheet" href="output.css" />
     <title>Layouts</title>
   </head>
-  <body class="flex h-screen w-full bg-slate-950 p-6">
-    <main
-      class="grid w-full grid-cols-1 gap-6 rounded-md text-7xl font-semibold text-white lg:grid-cols-3"
-    >
-      <section
-        class="col-span-1 flex items-center justify-center rounded-lg bg-slate-900 lg:col-span-2"
+  <body class="flex h-screen w-full bg-gray-950">
+    <main class="flex w-full flex-row-reverse">
+      <div class="flex h-full w-20 border-l border-gray-900"></div>
+      <div
+        class="grid h-full w-full grid-cols-1 rounded-md text-7xl font-semibold text-white lg:grid-cols-4"
       >
-        1
-      </section>
-      <section
-        class="col-span-1 flex items-center justify-center rounded-lg bg-slate-900"
-      >
-        2
-      </section>
+        <section
+          class="col-span-1 flex items-center justify-center rounded-l-xl border-r border-gray-800 bg-slate-900"
+        >
+          1
+        </section>
+        <section
+          class="col-span-1 flex items-center justify-center rounded-r-xl bg-slate-900 lg:col-span-2"
+        >
+          2
+        </section>
+        <section class="col-span-1 flex items-center justify-center">3</section>
+      </div>
     </main>
   </body>
 </html>
