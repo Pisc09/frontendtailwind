@@ -12,15 +12,20 @@
   </head>
   <body class="flex h-screen w-full flex-row gap-6 bg-zinc-950 p-6">
     <header
-      class="flex w-16 flex-initial flex-col items-center rounded-lg bg-zinc-900 py-6"
+      class="hidden w-16 flex-initial flex-col items-center rounded-xl bg-zinc-900 py-6 sm:flex"
     >
-      <!-- ↓ **GROUP** LOGO & MENU ICÔNES ↓ -->
+      <!-- ↓ **GROUP** LOGO & MENU ICONS ↓ -->
       <div class="flex h-max w-full flex-col items-center gap-6">
         <!-- ↓ LOGO Cube 3D ↓ -->
         <div class="w-max">
-          <img class="size-9 object-cover" src="images/cubicolor.png" alt="" />
+          <h1 class="sr-only">(Nom de la société)</h1>
+          <img
+            class="size-9 object-cover"
+            src="images/cubicolor.png"
+            alt="Logo"
+          />
         </div>
-        <!-- ↓ MENU ICÔNES ↓ -->
+        <!-- ↓ MENU ICONS ↓ -->
         <nav
           class="flex w-full flex-col items-center gap-6 text-2xl text-zinc-700 *:transition-colors *:delay-100 *:duration-150 *:ease-linear hover:*:cursor-pointer hover:*:text-indigo-700"
         >
@@ -31,11 +36,312 @@
         </nav>
       </div>
     </header>
-    <!-- ↓ ENSEMBLE DE DROITE ↓ -->
-    <main class="flex flex-grow flex-col rounded-lg bg-red-900 p-6 text-white">
-      <p>
-        <span class="font-semibold text-indigo-600">neutralize</span> neutralise
-      </p>
+    <!-- ↓ ***MAIN SET*** ↓ -->
+    <main
+      class="grid h-screen w-full flex-grow grid-cols-1 gap-6 rounded-lg text-white lg:grid-cols-3"
+    >
+      <!-- ↓ ***GROUP OF LEFT*** ↓ -->
+      <section
+        class="col-span-1 flex h-min w-full flex-col gap-6 lg:col-span-2"
+      >
+        <!-- ↓ ***First Row (Text)*** ↓ -->
+        <div
+          class="flex w-full flex-col gap-4 rounded-xl bg-zinc-900 p-6 pb-12 text-white"
+        >
+          <h2 class="text-base font-semibold sm:text-lg lg:text-2xl">
+            Prochaine réunion d'enregistrement vidéo
+          </h2>
+          <div
+            class="flex w-full flex-col items-center justify-between gap-5 sm:flex-row"
+          >
+            <p class="text-sm">
+              17 aout 2024
+              <span
+                class="relative ml-6 inline-flex items-center justify-center"
+              >
+                <!-- ↓ Small white circle in ABSOLUTE position. ↓ -->
+                <i class="absolute size-1 rounded-full bg-white"></i>
+                <i class="ri-record-circle-fill text-green-600"></i
+              ></span>
+              en ligne 27:49
+            </p>
+            <div class="flex flex-row gap-4">
+              <button
+                class="flex w-full flex-row items-center gap-4 rounded-xl bg-zinc-800 px-4 py-2 text-indigo-600 shadow-lg hover:text-indigo-500 sm:w-max"
+              >
+                <span class="text-sm">Partager le lien de l'appel</span>
+                <i class="ri-share-fill text-2xl"></i>
+              </button>
+              <button
+                class="flex w-full flex-row items-center gap-4 rounded-xl bg-zinc-800 px-3 py-2 text-indigo-600 shadow-lg hover:text-indigo-500 sm:w-max"
+              >
+                <i class="ri-more-2-line text-2xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- ↓ ***Second Row (Video-full)*** ↓ -->
+        <div class="w-full sm:px-6">
+          <div class="aspect-h-9 aspect-w-16 overflow-hidden rounded-xl">
+            <iframe
+              src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/hHeEEOX/videoblocks-beautiful-nature-norway-natural-landscape-aerial-footage-lovatnet-lake_b9gl6sxmbm__dcb124df7bbfd419dd91495aa1f78cb6__P360.mp4"
+              frameborder="0"
+              allowfullscreen
+              title="Beautiful Nature Norway"
+            ></iframe>
+          </div>
+        </div>
+        <!-- ↓ ***Third Row (VideoS)*** ↓ -->
+        <div class="grid grid-cols-4 gap-3 sm:gap-6 sm:px-6">
+          <!-- ↓ ***Small video Hind*** ↓ -->
+          <div class="aspect-h-9 aspect-w-16 relative">
+            <img
+              class="rounded-xl"
+              src="https://plus.unsplash.com/premium_photo-1676218969686-ec6fa0eaa487?q=80&w=3112&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <div
+              class="absolute bottom-0 hidden w-full items-end justify-center pb-2 sm:flex"
+            >
+              <h3
+                class="h-max w-max rounded-lg bg-zinc-900 px-3 py-2 text-xs text-white opacity-55"
+              >
+                Hind
+              </h3>
+            </div>
+          </div>
+          <!-- ↓ ***Small video Ibrahîma*** ↓ -->
+          <div class="aspect-h-9 aspect-w-16 relative">
+            <img
+              class="rounded-xl"
+              src="https://plus.unsplash.com/premium_photo-1676218969686-ec6fa0eaa487?q=80&w=3112&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <div
+              class="absolute bottom-0 hidden w-full items-end justify-center pb-2 sm:flex"
+            >
+              <h3
+                class="h-max w-max rounded-lg bg-zinc-900 px-3 py-2 text-xs text-white opacity-55"
+              >
+                Ibrahîma
+              </h3>
+            </div>
+          </div>
+          <!-- ↓ ***Small video Khadija*** ↓ -->
+          <div class="aspect-h-9 aspect-w-16 relative">
+            <img
+              class="rounded-xl"
+              src="https://plus.unsplash.com/premium_photo-1676218969686-ec6fa0eaa487?q=80&w=3112&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <div
+              class="absolute bottom-0 hidden w-full items-end justify-center pb-2 sm:flex"
+            >
+              <h3
+                class="h-max w-max rounded-lg bg-zinc-900 px-3 py-2 text-xs text-white opacity-55"
+              >
+                Khadija
+              </h3>
+            </div>
+          </div>
+          <!-- ↓ ***Small video Vous*** ↓ -->
+          <div class="aspect-h-9 aspect-w-16 relative">
+            <img
+              class="rounded-xl"
+              src="https://plus.unsplash.com/premium_photo-1676218969686-ec6fa0eaa487?q=80&w=3112&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <div
+              class="absolute bottom-0 hidden w-full items-end justify-center pb-2 sm:flex"
+            >
+              <h3
+                class="h-max w-max rounded-lg bg-zinc-900 px-3 py-2 text-xs text-white opacity-55"
+              >
+                Vous
+              </h3>
+            </div>
+          </div>
+        </div>
+        <!-- ↓ ***Fourth Row (Control Keys)*** ↓ -->
+        <div
+          class="flex w-full flex-row items-center justify-center gap-4 bg-transparent"
+        >
+          <!-- ↓ *video-off icon button* ↓ -->
+          <button
+            class="flex h-11 w-11 flex-row items-center justify-center rounded-full bg-indigo-600 shadow-md"
+          >
+            <i class="ri-video-off-fill text-lg"></i>
+          </button>
+          <!-- ↓ *mic-off icon button* ↓ -->
+          <button
+            class="flex h-11 w-11 flex-row items-center justify-center rounded-full bg-zinc-900 shadow-md"
+          >
+            <i class="ri-mic-off-line text-lg"></i>
+          </button>
+          <!-- ↓ *exit button* ↓ -->
+          <button
+            class="rounded-full bg-indigo-600 px-3 py-2 font-medium text-white"
+          >
+            Quitter
+          </button>
+          <!-- ↓ *computer-line icon button* ↓ -->
+          <button
+            class="flex h-11 w-11 flex-row items-center justify-center rounded-full bg-zinc-900 shadow-md"
+          >
+            <i class="ri-computer-line text-lg"></i>
+          </button>
+          <!-- ↓ *closed-captioning icon button* ↓ -->
+          <button
+            class="flex h-11 w-11 flex-row items-center justify-center rounded-full bg-zinc-900 shadow-md"
+          >
+            <i class="ri-closed-captioning-line text-lg"></i>
+          </button>
+        </div>
+      </section>
+      <!-- ↓ ***GROUP OF RIGHT*** ↓ -->
+      <section
+        class="col-span-1 flex w-full flex-col gap-6 rounded-xl bg-zinc-900 p-6 lg:col-span-1"
+      >
+        <div class="flex w-full flex-col gap-4 text-white">
+          <h2 class="w-full text-center text-2xl font-semibold">Messages</h2>
+          <p class="w-full text-center text-base">
+            Vous pouvez discuter ici avec les autres membres pendant l'appel
+            vidéo.
+          </p>
+        </div>
+        <div class="flex h-full w-full flex-col justify-between">
+          <!-- ↓ ***SENT MESSAGES*** ↓ -->
+          <div class="flex w-full flex-col gap-5">
+            <!-- ↓ ***First Message*** ↓ -->
+            <div class="flex flex-row items-center justify-center gap-5">
+              <img
+                class="size-16 rounded-full object-cover"
+                src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <div class="h-max w-full rounded-lg bg-zinc-800 p-2">
+                <div class="flex flex-row justify-between">
+                  <h4 class="text-sm font-semibold text-indigo-500">Hind</h4>
+                  <p class="text-sm">9:27</p>
+                </div>
+                <p class="text-xs">Slt comment ça va ?</p>
+              </div>
+            </div>
+            <!-- ↓ ***First Message*** ↓ -->
+            <div class="flex flex-row items-center justify-center gap-5">
+              <img
+                class="size-16 rounded-full object-cover"
+                src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <div class="h-max w-full rounded-lg bg-zinc-800 p-2">
+                <div class="flex flex-row justify-between">
+                  <h4 class="text-sm font-semibold text-indigo-500">Hind</h4>
+                  <p class="text-sm">9:27</p>
+                </div>
+                <p class="text-xs">Slt comment ça va ?</p>
+              </div>
+            </div>
+            <!-- ↓ ***First Message*** ↓ -->
+            <div class="flex flex-row items-center justify-center gap-5">
+              <img
+                class="size-16 rounded-full object-cover"
+                src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <div class="h-max w-full rounded-lg bg-zinc-800 p-2">
+                <div class="flex flex-row justify-between">
+                  <h4 class="text-sm font-semibold text-indigo-500">Hind</h4>
+                  <p class="text-sm">9:27</p>
+                </div>
+                <p class="text-xs">Slt comment ça va ?</p>
+              </div>
+            </div>
+            <!-- ↓ ***First Message*** ↓ -->
+            <div class="flex flex-row items-center justify-center gap-5">
+              <img
+                class="size-16 rounded-full object-cover"
+                src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <div class="h-max w-full rounded-lg bg-zinc-800 p-2">
+                <div class="flex flex-row justify-between">
+                  <h4 class="text-sm font-semibold text-indigo-500">Hind</h4>
+                  <p class="text-sm">9:27</p>
+                </div>
+                <p class="text-xs">Slt comment ça va ?</p>
+              </div>
+            </div>
+            <!-- ↓ ***First Message*** ↓ -->
+            <div class="flex flex-row items-center justify-center gap-5">
+              <img
+                class="size-16 rounded-full object-cover"
+                src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <div class="h-max w-full rounded-lg bg-zinc-800 p-2">
+                <div class="flex flex-row justify-between">
+                  <h4 class="text-sm font-semibold text-indigo-500">Hind</h4>
+                  <p class="text-sm">9:27</p>
+                </div>
+                <p class="text-xs">Slt comment ça va ?</p>
+              </div>
+            </div>
+            <!-- ↓ ***First Message*** ↓ -->
+            <div class="flex flex-row items-center justify-center gap-5">
+              <img
+                class="size-16 rounded-full object-cover"
+                src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <div class="h-max w-full rounded-lg bg-zinc-800 p-2">
+                <div class="flex flex-row justify-between">
+                  <h4 class="text-sm font-semibold text-indigo-500">Hind</h4>
+                  <p class="text-sm">9:27</p>
+                </div>
+                <p class="text-xs">Slt comment ça va ?</p>
+              </div>
+            </div>
+            <!-- ↓ ***First Message*** ↓ -->
+            <div class="flex flex-row items-center justify-center gap-5">
+              <img
+                class="size-16 rounded-full object-cover"
+                src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <div class="h-max w-full rounded-lg bg-zinc-800 p-2">
+                <div class="flex flex-row justify-between">
+                  <h4 class="text-sm font-semibold text-indigo-500">Hind</h4>
+                  <p class="text-sm">9:27</p>
+                </div>
+                <p class="text-xs">Slt comment ça va ?</p>
+              </div>
+            </div>
+          </div>
+          <!-- ↓ ***WRITE MESSAGE*** ↓ -->
+          <div class="relative h-14 w-full">
+            <div class="absolute inset-y-0 left-0 py-1.5 pl-1.5">
+              <div
+                class="flex h-full flex-row items-center rounded-lg bg-yellow-600"
+              >
+                <i class="ri-emoji-sticker-line px-3 text-2xl text-white"></i>
+              </div>
+            </div>
+            <input
+              class="h-full w-full rounded-lg border-0 px-16 text-gray-500 placeholder:text-sm placeholder:text-gray-500"
+              type="text"
+              placeholder="écrire un message..."
+            />
+            <div class="absolute inset-y-0 right-0 py-1.5 pr-1.5">
+              <div
+                class="flex h-full flex-row items-center rounded-lg bg-indigo-600"
+              >
+                <i class="ri-send-plane-2-fill px-3 text-xl text-white"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
