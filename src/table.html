@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="output.css" />
-    <title>Document</title>
+    <title>Table</title>
   </head>
-  <body class="bg-slate-950">
+  <body class="flex h-screen w-full flex-col gap-16 p-10">
+    <!-- ↓ Simple in card "Add user" ↓ -->
     <div class="px-4 sm:px-6 lg:px-8">
       <div class="sm:flex sm:items-center">
         <div class="sm:flex-auto">
@@ -95,7 +96,35 @@
                       >
                     </td>
                   </tr>
-
+                  <tr>
+                    <td
+                      class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6"
+                    >
+                      Courtney Henry
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
+                    >
+                      Designer
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
+                    >
+                      courtney.henry@example.com
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
+                    >
+                      Admin
+                    </td>
+                    <td
+                      class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6"
+                    >
+                      <a href="#" class="text-indigo-600 hover:text-indigo-900"
+                        >Edit<span class="sr-only">, Lindsay Walton</span></a
+                      >
+                    </td>
+                  </tr>
                   <!-- More people... -->
                 </tbody>
               </table>
@@ -104,7 +133,9 @@
         </div>
       </div>
     </div>
-    <div class="mt-32 flex gap-2 px-8">
+
+    <!-- ↓ BADGES BTNS ↓ -->
+    <div class="flex gap-2 px-8">
       <span
         class="m-2 inline-block cursor-pointer rounded border border-transparent bg-cyan-500 px-2.5 py-1 text-xs font-medium text-white"
       >
@@ -137,6 +168,619 @@
       >
         Info
       </span>
+    </div>
+
+    <!-- ↓ With border ↓ -->
+    <div class="-mx-4 ring-1 ring-gray-300 sm:mx-0 sm:rounded-lg">
+      <table class="min-w-full divide-y divide-gray-300">
+        <thead>
+          <tr>
+            <th
+              scope="col"
+              class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
+            >
+              Plan
+            </th>
+            <th
+              scope="col"
+              class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell"
+            >
+              Memory
+            </th>
+            <th
+              scope="col"
+              class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell"
+            >
+              CPU
+            </th>
+            <th
+              scope="col"
+              class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell"
+            >
+              Storage
+            </th>
+            <th
+              scope="col"
+              class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+            >
+              Price
+            </th>
+            <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
+              <span class="sr-only">Select</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="relative py-4 pl-4 pr-3 text-sm sm:pl-6">
+              <div class="font-medium text-gray-900">Hobby</div>
+              <div class="mt-1 flex flex-col text-gray-500 sm:block lg:hidden">
+                <span>4 GB RAM / 4 CPUs</span>
+                <span class="hidden sm:inline">·</span>
+                <span>128 GB SSD disk</span>
+              </div>
+            </td>
+            <td class="hidden px-3 py-3.5 text-sm text-gray-500 lg:table-cell">
+              4 GB RAM
+            </td>
+            <td class="hidden px-3 py-3.5 text-sm text-gray-500 lg:table-cell">
+              4 CPUs
+            </td>
+            <td class="hidden px-3 py-3.5 text-sm text-gray-500 lg:table-cell">
+              128 GB SSD disk
+            </td>
+            <td class="px-3 py-3.5 text-sm text-gray-500">
+              <div class="sm:hidden">$40/mo</div>
+              <div class="hidden sm:block">$40/month</div>
+            </td>
+            <td
+              class="relative py-3.5 pl-3 pr-4 text-right text-sm font-medium sm:pr-6"
+            >
+              <button
+                type="button"
+                class="inline-flex items-center rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white"
+              >
+                Select<span class="sr-only">, Hobby</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="relative border-t border-transparent py-4 pl-4 pr-3 text-sm sm:pl-6"
+            >
+              <div class="font-medium text-gray-900">
+                Startup
+                <span class="ml-1 cursor-pointer text-indigo-600"
+                  >(Current Plan)</span
+                >
+              </div>
+              <div class="mt-1 flex flex-col text-gray-500 sm:block lg:hidden">
+                <span>8 GB RAM / 6 CPUs</span>
+                <span class="hidden sm:inline">·</span>
+                <span>256 GB SSD disk</span>
+              </div>
+              <div
+                class="absolute -top-px left-6 right-0 h-px bg-gray-200"
+              ></div>
+            </td>
+            <td
+              class="hidden border-t border-gray-200 px-3 py-3.5 text-sm text-gray-500 lg:table-cell"
+            >
+              8 GB RAM
+            </td>
+            <td
+              class="hidden border-t border-gray-200 px-3 py-3.5 text-sm text-gray-500 lg:table-cell"
+            >
+              6 CPUs
+            </td>
+            <td
+              class="hidden border-t border-gray-200 px-3 py-3.5 text-sm text-gray-500 lg:table-cell"
+            >
+              256 GB SSD disk
+            </td>
+            <td
+              class="border-t border-gray-200 px-3 py-3.5 text-sm text-gray-500"
+            >
+              <div class="sm:hidden">$80/mo</div>
+              <div class="hidden sm:block">$80/month</div>
+            </td>
+            <td
+              class="relative border-t border-transparent py-3.5 pl-3 pr-4 text-right text-sm font-medium sm:pr-6"
+            >
+              <button
+                type="button"
+                class="inline-flex items-center rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white"
+                disabled
+              >
+                Select<span class="sr-only">, Startup</span>
+              </button>
+              <div
+                class="absolute -top-px left-0 right-6 h-px bg-gray-200"
+              ></div>
+            </td>
+          </tr>
+
+          <!-- More plans... -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ↓ Full width with avatars on dark ↓ -->
+    <div class="bg-gray-900 py-10 sm:rounded-lg">
+      <h2
+        class="px-4 text-base font-semibold leading-7 text-white sm:px-6 lg:px-8"
+      >
+        Latest activity
+      </h2>
+      <table class="mt-6 w-full whitespace-nowrap text-left">
+        <colgroup>
+          <col class="w-full sm:w-4/12" />
+          <col class="lg:w-4/12" />
+          <col class="lg:w-2/12" />
+          <col class="lg:w-1/12" />
+          <col class="lg:w-1/12" />
+        </colgroup>
+        <thead class="border-b border-white/10 text-sm leading-6 text-white">
+          <tr>
+            <th
+              scope="col"
+              class="py-2 pl-4 pr-8 font-semibold sm:pl-6 lg:pl-8"
+            >
+              User
+            </th>
+            <th
+              scope="col"
+              class="hidden py-2 pl-0 pr-8 font-semibold sm:table-cell"
+            >
+              Commit
+            </th>
+            <th
+              scope="col"
+              class="py-2 pl-0 pr-4 text-right font-semibold sm:pr-8 sm:text-left lg:pr-20"
+            >
+              Status
+            </th>
+            <th
+              scope="col"
+              class="hidden py-2 pl-0 pr-8 font-semibold md:table-cell lg:pr-20"
+            >
+              Duration
+            </th>
+            <th
+              scope="col"
+              class="hidden py-2 pl-0 pr-4 text-right font-semibold sm:table-cell sm:pr-6 lg:pr-8"
+            >
+              Deployed at
+            </th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/5">
+          <tr>
+            <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
+              <div class="flex items-center gap-x-4">
+                <img
+                  src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                  class="h-8 w-8 rounded-full bg-gray-800"
+                />
+                <div class="truncate text-sm font-medium leading-6 text-white">
+                  Michael Foster
+                </div>
+              </div>
+            </td>
+            <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+              <div class="flex gap-x-3">
+                <div class="font-mono text-sm leading-6 text-gray-400">
+                  2d89f0c8
+                </div>
+                <div
+                  class="rounded-md bg-gray-700/40 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-white/10"
+                >
+                  main
+                </div>
+              </div>
+            </td>
+            <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
+              <div
+                class="flex items-center justify-end gap-x-2 sm:justify-start"
+              >
+                <time
+                  class="text-gray-400 sm:hidden"
+                  datetime="2023-01-23T11:00"
+                  >45 minutes ago</time
+                >
+                <div
+                  class="flex-none rounded-full bg-green-400/10 p-1 text-green-400"
+                >
+                  <div class="h-1.5 w-1.5 rounded-full bg-current"></div>
+                </div>
+                <div class="hidden text-white sm:block">Completed</div>
+              </div>
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-8 text-sm leading-6 text-gray-400 md:table-cell lg:pr-20"
+            >
+              25s
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-4 text-right text-sm leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8"
+            >
+              <time datetime="2023-01-23T11:00">45 minutes ago</time>
+            </td>
+          </tr>
+          <tr>
+            <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
+              <div class="flex items-center gap-x-4">
+                <img
+                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                  class="h-8 w-8 rounded-full bg-gray-800"
+                />
+                <div class="truncate text-sm font-medium leading-6 text-white">
+                  Lindsay Walton
+                </div>
+              </div>
+            </td>
+            <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+              <div class="flex gap-x-3">
+                <div class="font-mono text-sm leading-6 text-gray-400">
+                  249df660
+                </div>
+                <div
+                  class="rounded-md bg-gray-700/40 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-white/10"
+                >
+                  main
+                </div>
+              </div>
+            </td>
+            <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
+              <div
+                class="flex items-center justify-end gap-x-2 sm:justify-start"
+              >
+                <time
+                  class="text-gray-400 sm:hidden"
+                  datetime="2023-01-23T09:00"
+                  >3 hours ago</time
+                >
+                <div
+                  class="flex-none rounded-full bg-green-400/10 p-1 text-green-400"
+                >
+                  <div class="h-1.5 w-1.5 rounded-full bg-current"></div>
+                </div>
+                <div class="hidden text-white sm:block">Completed</div>
+              </div>
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-8 text-sm leading-6 text-gray-400 md:table-cell lg:pr-20"
+            >
+              1m 32s
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-4 text-right text-sm leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8"
+            >
+              <time datetime="2023-01-23T09:00">3 hours ago</time>
+            </td>
+          </tr>
+          <tr>
+            <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
+              <div class="flex items-center gap-x-4">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                  class="h-8 w-8 rounded-full bg-gray-800"
+                />
+                <div class="truncate text-sm font-medium leading-6 text-white">
+                  Courtney Henry
+                </div>
+              </div>
+            </td>
+            <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+              <div class="flex gap-x-3">
+                <div class="font-mono text-sm leading-6 text-gray-400">
+                  11464223
+                </div>
+                <div
+                  class="rounded-md bg-gray-700/40 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-white/10"
+                >
+                  main
+                </div>
+              </div>
+            </td>
+            <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
+              <div
+                class="flex items-center justify-end gap-x-2 sm:justify-start"
+              >
+                <time
+                  class="text-gray-400 sm:hidden"
+                  datetime="2023-01-23T00:00"
+                  >12 hours ago</time
+                >
+                <div
+                  class="flex-none rounded-full bg-rose-400/10 p-1 text-rose-400"
+                >
+                  <div class="h-1.5 w-1.5 rounded-full bg-current"></div>
+                </div>
+                <div class="hidden text-white sm:block">Error</div>
+              </div>
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-8 text-sm leading-6 text-gray-400 md:table-cell lg:pr-20"
+            >
+              1m 4s
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-4 text-right text-sm leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8"
+            >
+              <time datetime="2023-01-23T00:00">12 hours ago</time>
+            </td>
+          </tr>
+          <tr>
+            <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
+              <div class="flex items-center gap-x-4">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                  class="h-8 w-8 rounded-full bg-gray-800"
+                />
+                <div class="truncate text-sm font-medium leading-6 text-white">
+                  Courtney Henry
+                </div>
+              </div>
+            </td>
+            <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+              <div class="flex gap-x-3">
+                <div class="font-mono text-sm leading-6 text-gray-400">
+                  dad28e95
+                </div>
+                <div
+                  class="rounded-md bg-gray-700/40 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-white/10"
+                >
+                  main
+                </div>
+              </div>
+            </td>
+            <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
+              <div
+                class="flex items-center justify-end gap-x-2 sm:justify-start"
+              >
+                <time
+                  class="text-gray-400 sm:hidden"
+                  datetime="2023-01-21T13:00"
+                  >2 days ago</time
+                >
+                <div
+                  class="flex-none rounded-full bg-green-400/10 p-1 text-green-400"
+                >
+                  <div class="h-1.5 w-1.5 rounded-full bg-current"></div>
+                </div>
+                <div class="hidden text-white sm:block">Completed</div>
+              </div>
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-8 text-sm leading-6 text-gray-400 md:table-cell lg:pr-20"
+            >
+              2m 15s
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-4 text-right text-sm leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8"
+            >
+              <time datetime="2023-01-21T13:00">2 days ago</time>
+            </td>
+          </tr>
+          <tr>
+            <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
+              <div class="flex items-center gap-x-4">
+                <img
+                  src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                  class="h-8 w-8 rounded-full bg-gray-800"
+                />
+                <div class="truncate text-sm font-medium leading-6 text-white">
+                  Michael Foster
+                </div>
+              </div>
+            </td>
+            <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+              <div class="flex gap-x-3">
+                <div class="font-mono text-sm leading-6 text-gray-400">
+                  624bc94c
+                </div>
+                <div
+                  class="rounded-md bg-gray-700/40 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-white/10"
+                >
+                  main
+                </div>
+              </div>
+            </td>
+            <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
+              <div
+                class="flex items-center justify-end gap-x-2 sm:justify-start"
+              >
+                <time
+                  class="text-gray-400 sm:hidden"
+                  datetime="2023-01-18T12:34"
+                  >5 days ago</time
+                >
+                <div
+                  class="flex-none rounded-full bg-green-400/10 p-1 text-green-400"
+                >
+                  <div class="h-1.5 w-1.5 rounded-full bg-current"></div>
+                </div>
+                <div class="hidden text-white sm:block">Completed</div>
+              </div>
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-8 text-sm leading-6 text-gray-400 md:table-cell lg:pr-20"
+            >
+              1m 12s
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-4 text-right text-sm leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8"
+            >
+              <time datetime="2023-01-18T12:34">5 days ago</time>
+            </td>
+          </tr>
+          <tr>
+            <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
+              <div class="flex items-center gap-x-4">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                  class="h-8 w-8 rounded-full bg-gray-800"
+                />
+                <div class="truncate text-sm font-medium leading-6 text-white">
+                  Courtney Henry
+                </div>
+              </div>
+            </td>
+            <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+              <div class="flex gap-x-3">
+                <div class="font-mono text-sm leading-6 text-gray-400">
+                  e111f80e
+                </div>
+                <div
+                  class="rounded-md bg-gray-700/40 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-white/10"
+                >
+                  main
+                </div>
+              </div>
+            </td>
+            <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
+              <div
+                class="flex items-center justify-end gap-x-2 sm:justify-start"
+              >
+                <time
+                  class="text-gray-400 sm:hidden"
+                  datetime="2023-01-16T15:54"
+                  >1 week ago</time
+                >
+                <div
+                  class="flex-none rounded-full bg-green-400/10 p-1 text-green-400"
+                >
+                  <div class="h-1.5 w-1.5 rounded-full bg-current"></div>
+                </div>
+                <div class="hidden text-white sm:block">Completed</div>
+              </div>
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-8 text-sm leading-6 text-gray-400 md:table-cell lg:pr-20"
+            >
+              1m 56s
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-4 text-right text-sm leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8"
+            >
+              <time datetime="2023-01-16T15:54">1 week ago</time>
+            </td>
+          </tr>
+          <tr>
+            <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
+              <div class="flex items-center gap-x-4">
+                <img
+                  src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                  class="h-8 w-8 rounded-full bg-gray-800"
+                />
+                <div class="truncate text-sm font-medium leading-6 text-white">
+                  Michael Foster
+                </div>
+              </div>
+            </td>
+            <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+              <div class="flex gap-x-3">
+                <div class="font-mono text-sm leading-6 text-gray-400">
+                  5e136005
+                </div>
+                <div
+                  class="rounded-md bg-gray-700/40 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-white/10"
+                >
+                  main
+                </div>
+              </div>
+            </td>
+            <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
+              <div
+                class="flex items-center justify-end gap-x-2 sm:justify-start"
+              >
+                <time
+                  class="text-gray-400 sm:hidden"
+                  datetime="2023-01-16T11:31"
+                  >1 week ago</time
+                >
+                <div
+                  class="flex-none rounded-full bg-green-400/10 p-1 text-green-400"
+                >
+                  <div class="h-1.5 w-1.5 rounded-full bg-current"></div>
+                </div>
+                <div class="hidden text-white sm:block">Completed</div>
+              </div>
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-8 text-sm leading-6 text-gray-400 md:table-cell lg:pr-20"
+            >
+              3m 45s
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-4 text-right text-sm leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8"
+            >
+              <time datetime="2023-01-16T11:31">1 week ago</time>
+            </td>
+          </tr>
+          <tr>
+            <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
+              <div class="flex items-center gap-x-4">
+                <img
+                  src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                  class="h-8 w-8 rounded-full bg-gray-800"
+                />
+                <div class="truncate text-sm font-medium leading-6 text-white">
+                  Whitney Francis
+                </div>
+              </div>
+            </td>
+            <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+              <div class="flex gap-x-3">
+                <div class="font-mono text-sm leading-6 text-gray-400">
+                  5c1fd07f
+                </div>
+                <div
+                  class="rounded-md bg-gray-700/40 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-white/10"
+                >
+                  main
+                </div>
+              </div>
+            </td>
+            <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
+              <div
+                class="flex items-center justify-end gap-x-2 sm:justify-start"
+              >
+                <time
+                  class="text-gray-400 sm:hidden"
+                  datetime="2023-01-09T08:45"
+                  >2 weeks ago</time
+                >
+                <div
+                  class="flex-none rounded-full bg-green-400/10 p-1 text-green-400"
+                >
+                  <div class="h-1.5 w-1.5 rounded-full bg-current"></div>
+                </div>
+                <div class="hidden text-white sm:block">Completed</div>
+              </div>
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-8 text-sm leading-6 text-gray-400 md:table-cell lg:pr-20"
+            >
+              37s
+            </td>
+            <td
+              class="hidden py-4 pl-0 pr-4 text-right text-sm leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8"
+            >
+              <time datetime="2023-01-09T08:45">2 weeks ago</time>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>

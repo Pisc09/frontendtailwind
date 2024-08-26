@@ -10,28 +10,26 @@
     <link rel="stylesheet" href="output.css" />
     <title>Champ de saisie</title>
   </head>
-  <body class="flex h-screen items-center justify-center bg-slate-950">
-    <!-- ↓ Mise en page d'une balise input avec élément positionné à droite ↓ -->
-    <!-- ******************************************************************** -->
-    <!-- ↓ Balise parent qui englobe tout, en position RELATIVE, cette div permet d'étendre l'input sur toute la largeur du navigateur avec "w-full" ↓ -->
+  <body class="flex h-screen items-center justify-center bg-zinc-950">
+    <!-- ↓ Mise en page d'un champ de saisie avec un élément positionné à droite ↓ -->
+
+    <!-- ↓ Conteneur parent en position relative, permettant à l'input de s'étendre sur toute la largeur de la page avec "w-full" ↓ -->
     <div class="relative flex items-center">
-      <!-- ↓ Balise input, **pas de position** ↓ -->
+      <!-- ↓ Champ de saisie sans positionnement spécifique ↓ -->
       <input
-        class="block w-full rounded-md border-0 bg-slate-950 py-1.5 pr-14 text-white ring-1 ring-inset ring-gray-800 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        class="block w-full rounded-md border-0 bg-zinc-950 py-1.5 pr-14 text-white ring-1 ring-inset ring-zinc-800 placeholder:text-xs placeholder:text-zinc-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         type="text"
+        placeholder="Rechercher..."
       />
-      <!-- ↓ Balise qui est positionné à droite, en position ABSOLUTE ↓ -->
+      <!-- ↓ Élément positionné à droite en position absolue ↓ -->
       <div class="absolute inset-y-0 right-0 flex py-1.5 pr-1.5">
-        <!-- ↓ Balise à l'intérieur de celle poisitionné à droite, qui à le carré arrondi ↓ -->
+        <!-- ↓ Élément "kbd" à l'intérieur de l'élément positionné à droite, avec des coins arrondis ↓ -->
         <kbd
-          class="inline-flex items-center rounded border border-gray-800 bg-gray-900 px-1 font-sans text-xs text-gray-700"
+          class="inline-flex items-center rounded border border-zinc-800 bg-zinc-900 px-1 font-sans text-xs text-zinc-700"
         >
           ⌘K
         </kbd>
       </div>
     </div>
-    <i
-      class="ri-folder-fill cursor-pointer text-2xl text-gray-800 transition-all duration-300 ease-linear hover:text-sky-500"
-    ></i>
   </body>
 </html>

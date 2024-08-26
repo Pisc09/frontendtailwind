@@ -12,10 +12,10 @@
   </head>
   <body class="flex h-screen w-full flex-row gap-6 bg-zinc-950 p-6">
     <header
-      class="hidden w-16 flex-initial flex-col items-center rounded-xl bg-zinc-900 py-6 sm:flex"
+      class="hidden h-screen w-16 flex-initial flex-col items-center justify-between rounded-xl bg-zinc-900 py-6 sm:flex"
     >
       <!-- ↓ **GROUP** LOGO & MENU ICONS ↓ -->
-      <div class="flex h-max w-full flex-col items-center gap-6">
+      <div class="flex h-max w-max flex-col items-center gap-6">
         <!-- ↓ LOGO Cube 3D ↓ -->
         <div class="w-max">
           <h1 class="sr-only">(Nom de la société)</h1>
@@ -35,10 +35,50 @@
           <i class="ri-message-2-fill"></i>
         </nav>
       </div>
+      <!-- ↓ USER ↓ -->
+      <img
+        class="size-9 rounded-full bg-blue-600 object-cover"
+        src="https://www.bing.com/th?id=OUG.2F82D314D2300C402C40BD80D38061BE&w=236&c=11&rs=1&qlt=90&bgcl=ececec&o=6&pid=PersonalBing&p=0"
+        alt=""
+      />
+    </header>
+
+    <header
+      class="absolute left-0 top-0 flex w-full flex-row items-center justify-center bg-zinc-900 py-6 sm:hidden"
+    >
+      <!-- ↓ **GROUP** LOGO - MENU ICONS & USER ↓ -->
+      <div
+        class="flex h-max w-full flex-row items-center justify-between gap-6 px-6"
+      >
+        <!-- ↓ LOGO Cube 3D ↓ -->
+        <div class="w-max">
+          <h1 class="sr-only">(Nom de la société)</h1>
+          <img
+            class="size-9 object-cover"
+            src="images/cubicolor.png"
+            alt="Logo"
+          />
+        </div>
+        <!-- ↓ MENU ICONS ↓ -->
+        <nav
+          class="flex w-max flex-row items-center gap-6 text-2xl text-zinc-700 *:transition-colors *:delay-100 *:duration-150 *:ease-linear hover:*:cursor-pointer hover:*:text-indigo-700"
+        >
+          <i class="ri-home-5-fill"></i>
+          <i class="ri-video-on-fill text-indigo-700"></i>
+          <i class="ri-mic-2-fill"></i>
+          <i class="ri-message-2-fill"></i>
+        </nav>
+        <!-- ↓ USER ↓ -->
+        <img
+          class="size-9 rounded-full bg-blue-600 object-cover"
+          src="https://www.bing.com/th?id=OUG.405F33020E3100379E628FA7F0D6CC7A&w=236&c=11&rs=1&qlt=90&bgcl=ececec&o=6&pid=PersonalBing&p=0"
+          alt=""
+        />
+      </div>
     </header>
     <!-- ↓ ***MAIN SET*** ↓ -->
     <main
-      class="grid h-screen w-full flex-grow grid-cols-1 gap-6 rounded-lg text-white lg:grid-cols-3"
+      class="mt-20 grid h-screen w-full flex-grow grid-cols-1 gap-6 rounded-lg text-white sm:mt-0 lg:grid-cols-3"
     >
       <!-- ↓ ***GROUP OF LEFT*** ↓ -->
       <section
@@ -46,9 +86,11 @@
       >
         <!-- ↓ ***First Row (Text)*** ↓ -->
         <div
-          class="flex w-full flex-col gap-4 rounded-xl bg-zinc-900 p-6 pb-12 text-white"
+          class="flex w-full flex-col gap-4 rounded-xl bg-zinc-900 p-6 text-white sm:pb-12"
         >
-          <h2 class="text-base font-semibold sm:text-lg lg:text-2xl">
+          <h2
+            class="text-center text-base font-semibold sm:text-start sm:text-lg lg:text-2xl"
+          >
             Prochaine réunion d'enregistrement vidéo
           </h2>
           <div
@@ -65,15 +107,20 @@
               ></span>
               en ligne 27:49
             </p>
-            <div class="flex flex-row gap-4">
+            <div class="flex w-max flex-row gap-4">
               <button
-                class="flex w-full flex-row items-center gap-4 rounded-xl bg-zinc-800 px-4 py-2 text-indigo-600 shadow-lg hover:text-indigo-500 sm:w-max"
+                class="flex w-52 flex-row items-center justify-center gap-4 rounded-xl bg-zinc-800 px-4 py-2 text-indigo-600 shadow-lg hover:text-indigo-500 sm:w-64"
               >
-                <span class="text-sm">Partager le lien de l'appel</span>
+                <span class="inline-flex text-sm sm:hidden"
+                  >Partager l'appel</span
+                >
+                <span class="hidden text-sm sm:inline-flex"
+                  >Partager le lien de l'appel</span
+                >
                 <i class="ri-share-fill text-2xl"></i>
               </button>
               <button
-                class="flex w-full flex-row items-center gap-4 rounded-xl bg-zinc-800 px-3 py-2 text-indigo-600 shadow-lg hover:text-indigo-500 sm:w-max"
+                class="flex size-12 items-center justify-center gap-4 rounded-xl bg-zinc-800 text-indigo-600 shadow-lg hover:text-indigo-500"
               >
                 <i class="ri-more-2-line text-2xl"></i>
               </button>
@@ -82,8 +129,11 @@
         </div>
         <!-- ↓ ***Second Row (Video-full)*** ↓ -->
         <div class="w-full sm:px-6">
-          <div class="aspect-h-9 aspect-w-16 overflow-hidden rounded-xl">
+          <div
+            class="aspect-h-9 aspect-w-16 relative overflow-hidden rounded-xl"
+          >
             <iframe
+              class="absolute left-0 top-0 h-full w-full"
               src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/hHeEEOX/videoblocks-beautiful-nature-norway-natural-landscape-aerial-footage-lovatnet-lake_b9gl6sxmbm__dcb124df7bbfd419dd91495aa1f78cb6__P360.mp4"
               frameborder="0"
               allowfullscreen
@@ -204,18 +254,18 @@
       >
         <div class="flex w-full flex-col gap-4 text-white">
           <h2 class="w-full text-center text-2xl font-semibold">Messages</h2>
-          <p class="w-full text-center text-base">
+          <p class="w-full text-center text-sm sm:text-base">
             Vous pouvez discuter ici avec les autres membres pendant l'appel
             vidéo.
           </p>
         </div>
+        <!-- ↓ ***SENT MESSAGES*** ↓ -->
         <div class="flex h-full w-full flex-col justify-between">
-          <!-- ↓ ***SENT MESSAGES*** ↓ -->
           <div class="flex w-full flex-col gap-5">
             <!-- ↓ ***First Message*** ↓ -->
             <div class="flex flex-row items-center justify-center gap-5">
               <img
-                class="size-16 rounded-full object-cover"
+                class="size-12 rounded-full object-cover lg:size-16"
                 src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
               />
@@ -227,10 +277,10 @@
                 <p class="text-xs">Slt comment ça va ?</p>
               </div>
             </div>
-            <!-- ↓ ***First Message*** ↓ -->
+            <!-- ↓ ***Second Message*** ↓ -->
             <div class="flex flex-row items-center justify-center gap-5">
               <img
-                class="size-16 rounded-full object-cover"
+                class="size-12 rounded-full object-cover lg:size-16"
                 src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
               />
@@ -242,10 +292,10 @@
                 <p class="text-xs">Slt comment ça va ?</p>
               </div>
             </div>
-            <!-- ↓ ***First Message*** ↓ -->
+            <!-- ↓ ***Third Message*** ↓ -->
             <div class="flex flex-row items-center justify-center gap-5">
               <img
-                class="size-16 rounded-full object-cover"
+                class="size-12 rounded-full object-cover lg:size-16"
                 src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
               />
@@ -257,10 +307,10 @@
                 <p class="text-xs">Slt comment ça va ?</p>
               </div>
             </div>
-            <!-- ↓ ***First Message*** ↓ -->
+            <!-- ↓ ***Fourth Message*** ↓ -->
             <div class="flex flex-row items-center justify-center gap-5">
               <img
-                class="size-16 rounded-full object-cover"
+                class="size-12 rounded-full object-cover lg:size-16"
                 src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
               />
@@ -272,40 +322,10 @@
                 <p class="text-xs">Slt comment ça va ?</p>
               </div>
             </div>
-            <!-- ↓ ***First Message*** ↓ -->
+            <!-- ↓ ***Fifth Message*** ↓ -->
             <div class="flex flex-row items-center justify-center gap-5">
               <img
-                class="size-16 rounded-full object-cover"
-                src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-              />
-              <div class="h-max w-full rounded-lg bg-zinc-800 p-2">
-                <div class="flex flex-row justify-between">
-                  <h4 class="text-sm font-semibold text-indigo-500">Hind</h4>
-                  <p class="text-sm">9:27</p>
-                </div>
-                <p class="text-xs">Slt comment ça va ?</p>
-              </div>
-            </div>
-            <!-- ↓ ***First Message*** ↓ -->
-            <div class="flex flex-row items-center justify-center gap-5">
-              <img
-                class="size-16 rounded-full object-cover"
-                src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-              />
-              <div class="h-max w-full rounded-lg bg-zinc-800 p-2">
-                <div class="flex flex-row justify-between">
-                  <h4 class="text-sm font-semibold text-indigo-500">Hind</h4>
-                  <p class="text-sm">9:27</p>
-                </div>
-                <p class="text-xs">Slt comment ça va ?</p>
-              </div>
-            </div>
-            <!-- ↓ ***First Message*** ↓ -->
-            <div class="flex flex-row items-center justify-center gap-5">
-              <img
-                class="size-16 rounded-full object-cover"
+                class="size-12 rounded-full object-cover lg:size-16"
                 src="https://images.unsplash.com/photo-1542224566-1afa7596a738?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
               />
@@ -319,7 +339,7 @@
             </div>
           </div>
           <!-- ↓ ***WRITE MESSAGE*** ↓ -->
-          <div class="relative h-14 w-full">
+          <div class="relative mt-32 h-14 w-full">
             <div class="absolute inset-y-0 left-0 py-1.5 pl-1.5">
               <div
                 class="flex h-full flex-row items-center rounded-lg bg-yellow-600"
@@ -343,5 +363,7 @@
         </div>
       </section>
     </main>
+    <script src="../functions.js"></script>
+    <script src="../props.js"></script>
   </body>
 </html>
