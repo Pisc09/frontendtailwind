@@ -7,3 +7,9 @@
     font-family: "Montserrat", sans-serif;
   }
 }
+
+/* @layer components {
+  .btn-custom {
+    @apply text-2xl;
+  }
+} */

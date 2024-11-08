@@ -63,3 +63,23 @@ function Param5(para) {
   console.log(para.toLocaleUpperCase()); // Affiche "ARGU5" dans la console si un argument est passé
 }
 Param5("argu5"); // Appel de la fonction avec l'argument "argu5"
+
+const a = "mots";
+const b = new String("mots");
+const c = String("mots");
+const d = String(55);
+const e = 55;
+
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+
+const f = "symbol id";
+const g = "symbol id";
+console.log(f === g);
+
+const h = Symbol("id");
+const i = Symbol("id");
+console.log(h === i);
